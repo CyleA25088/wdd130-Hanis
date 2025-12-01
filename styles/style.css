@@ -1,0 +1,128 @@
+/* ============================= */
+/* BASE STYLE SHEET FOR ALL PAGES */
+/* ============================= */
+
+/* --- CSS Variables --- */
+:root {
+    /* Colors */
+    --primary-bg: #101418;
+    --secondary-bg: #242e37;
+    --accent-1: #1c3735;
+    --accent-2: #033720;
+    --button-color: #595959;
+    --text-color: #ffffff;
+
+    /* Typography */
+    --heading-font: 'Times New Roman', serif;
+    --paragraph-font: sans-serif;
+
+    /* Spacing */
+    --container-padding: 2rem;
+    --section-margin: 2rem;
+    --border-radius: 10px;
+}
+
+/* --- Reset some default styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* --- Headings --- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+/* --- Navigation --- */
+nav {
+    background-color: var(--primary-bg);
+    padding: 1rem var(--container-padding);
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+nav a {
+    background-color: var(--button-color);  
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+nav img{
+    height: 45px;
+}
+
+nav a:hover {
+    color: var(--accent-1);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+footer .links{
+    display: flex;
+    gap: 50px;
+}
+
+footer a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    color: var(--accent-1);
+}
+
+/* --- Main container --- */
+.container {
+    padding: 0 var(--container-padding);
+}
+
+
+/* --- Buttons --- */
+button {
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: var(--accent-1);
+}
+
+/* --- Links --- */
+a {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--accent-1);
+}

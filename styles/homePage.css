@@ -1,0 +1,67 @@
+.container > div {
+    border: 2px solid transparent;
+    padding: 1.5rem;
+    margin: var(--section-margin) 0;
+    border-radius: var(--border-radius);
+}
+
+.random-topic img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* --- Topic List on All Pages --- */
+.topic-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: var(--section-margin) 0;
+}
+
+.topic-list a {
+    background-color: var(--secondary-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: background 0.3s;
+}
+
+.topic-list a:hover {
+    background-color: var(--accent-1);
+}
+
+/* --- Topic Page --- */
+.topic-page img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.topic-page p {
+    margin-bottom: 1rem;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 8px;
+    background-color: var(--secondary-bg);
+    min-height: 50vh;
+
+    text-align: center;
+}
+
+.container > div.random-section{
+    border-color: var(--accent-2);
+    background-color: var(--accent-1);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
