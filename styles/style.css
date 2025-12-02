@@ -96,7 +96,9 @@ footer a:hover {
 }
 
 /* --- Main container --- */
-.container {
+.container{
+    background-color: var(--secondary-bg);
+    min-height: 300px;
     padding: 0 var(--container-padding);
 }
 

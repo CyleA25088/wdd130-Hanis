@@ -5,6 +5,14 @@
     border-radius: var(--border-radius);
 }
 
+
+
+.random-topic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .random-topic img {
     max-width: 100%;
     height: auto;
@@ -35,7 +43,7 @@
 
 /* --- Topic Page --- */
 .topic-page img {
-    max-width: 100%;
+    width: 300px;
     height: auto;
     display: block;
     margin-bottom: 1rem;
