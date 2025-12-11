@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanis Website</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/homePage.css">
+    <link rel="stylesheet" href="./selectedPage.css">
+</head>
+<body>
+    <nav>
+        <img src="../assets/logo.png" alt="BaseLine Logo">
+        <a href="/">Home</a>
+        <a href="/allPages">All Pages</a>
+        <a href="/random-page/" id="random-page-btn">Random Page</a>
+    </nav>
+
+
+    <div class="container" style="padding:60px;">
+        <div class="home-intro-section">
+            <section class="intro">
+                <h1 id="topic-title"></h1>
+                <p id="topic-text"></p>
+            </section>
+        </div>
+        <img src="placeholder.jpg" alt="Random Topic Image" id="topic-img">
+    </div>
+
+    <footer>
+        <div class="link">
+            <a href="/">Home</a>
+            <a href="/allPages/">All Pages</a>
+            <a href="/random-page/" id="footer-random-btn">Random Page</a>
+        </div>
+        <p>Created in 2025</p>
+    </footer>
+
+    
+    <script>
+        const topics = [
+            {name: "George Washington", img: "george-washington.png", text: "George Washington was the first president of the United States. He served his term with Vice President John Adams and held office for two four-year terms. He was born February 22, 1732, and died December 14, 1799. He served as a commander in the Continental Army, and led his forces against the British in the Revolutionary War."},
+            {name: "Michael Jackson", img: "michael-jackson.png", text: "Born August 29, 1958, Michael Jackson became a pop superstar, being known as the King of Pop. He started his career in The Jackson 5, a band comprised of him and his 4 brothers. He later went on to perform solo, and was considered one of the greatest artists of all time."},
+            {name: "Among Us", img: "among-us.jpg", text: "Among Us is a game developed by Innersloth on PC, Console, and Mobile, first released June 15, 2018. Up to 15 players can play in one game. In a game, there are 1-3 impostors who try to kill the rest of the players, while others complete tasks or vote out the impostors."},
+            {name: "Lorem Ipsum", img: "lorem-ipsum.png", text: "Lorem Ipsum is placeholder text used in web development and design. It originates from a scrambled version of a text from 45 BC."}
+        ];
+
+        const topicImg = document.getElementById("topic-img");
+        const topicText = document.getElementById("topic-text");
+        const topicTitle = document.getElementById("topic-title");
+
+        function showTopic(index) {
+            console.log(typeof index)
+            const topic = topics[index];
+            console.log(topic, index)
+            topicImg.src = "../assets/" + topic.img;
+            topicImg.alt = topic.name;
+            topicText.textContent = topic.text;
+            topicTitle.innerText = topic.name;
+        }
+
+        // get topic index from url ?index=0
+        function getTopicIndexFromUrl() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const index = urlParams.get("index");
+            if (index !== null) {
+                return parseInt(index);
+            } else {
+                return Math.floor(Math.random() * topics.length);
+            }
+        }
+
+        showTopic(getTopicIndexFromUrl());
+    </script>
+</body>
+</html>

@@ -124,7 +124,7 @@ a {
     color: var(--text-color);
     text-decoration: underline;
 }
-
+/* 
 a:hover {
     color: var(--accent-1);
-}
+} */
