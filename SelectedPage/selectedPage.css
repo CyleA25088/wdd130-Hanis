@@ -1,3 +1,8 @@
 #topic-text, #topic-title {
     text-align: left;
 }
+
+#topic-img {
+    width: 100%;
+    max-width: 400px;
+}
